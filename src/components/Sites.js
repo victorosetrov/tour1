@@ -1,16 +1,16 @@
 import React from 'react'
-import Tour from  './Tour'
+import Site from  './Site'
 
-function Tours(props){
+function Sites(props){
   return (
     <ul>
       {props.authors.map(function(i, index) {
         return (
           <li key={index}>
-            <Tour
+            <Site
             author={i.author}
-            tour={i.tour}
-            cost={i.cost}
+            site={i.site}
+            direct={i.direct}
             />
           </li>
         )
@@ -19,4 +19,4 @@ function Tours(props){
   )
 }
 
-export default Tours
+export default Sites

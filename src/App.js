@@ -1,35 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import Tour from  './components/Tour'
-import Tours from  './components/Tours'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Navbar from "./components/Navbar"
+import Home from "./views/Home"
+import ShoppingList from "./views/ShoppingList"
+
 
 function App() {
-  var authors = [
-    {
-      author:"Viktor Osetrov",
-      tour:"Exploring Wexford",
-      cost:100
-    },
-    {
-      author:"Robert Osetrov",
-      tour:"Exploring Waterford",
-      cost:250
-    },
-    {
-      author:"Aliia Musina",
-      tour:"Exploring Waterford",
-      cost:330
-    },
-  ]
+  return (
+    <Router>
+        <div>
+          <Navbar />
+            <Routes>
+              <Route exact path="/" element={
+              <Home />
+            }></Route>
 
- {
-    return (
-      <div>
-        <Tours authors={authors} />
-      </div>
-    );
-  } 
+            <Route path="/shopping_list" element={
+              <ShoppingList />
+            }></Route>
+              
+            </Routes>
+        </div> 
+    </Router>
+  );
+} 
 
-}
 
 export default App;

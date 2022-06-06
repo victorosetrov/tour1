@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Tour(props){
+function Site(props){
   return(
     <div>
       <h3>{props.author}</h3>
-      <div>{props.tour} - {props.cost}</div>
+      <div>{props.site} - {props.direct}</div>
     </div>
   );
 }
 
-export default Tour;
+export default Site;
